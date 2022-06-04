@@ -16,14 +16,14 @@ public class DowsingRodItem extends Item {
     }
 
     @Override
-    public InteractionResult useOn(UseOnContext p_41427_) {
-        if (p_41427_.getLevel().isClientSide()) {
-            BlockPos positionClicked = p_41427_.getClickedPos();
-            Player player = p_41427_.getPlayer();
+    public InteractionResult useOn(UseOnContext pContext) {
+        if (pContext.getLevel().isClientSide()) {
+            BlockPos positionClicked = pContext.getClickedPos();
+            Player player = pContext.getPlayer();
             boolean foundBlock = false;
 
             for (int i = 0; i <= positionClicked.getY() + 64; i++) {
-                Block blockBelow = p_41427_.getLevel().getBlockState(positionClicked.below(i)).getBlock();
+                Block blockBelow = pContext.getLevel().getBlockState(positionClicked.below(i)).getBlock();
 
                 if (isValuableBlock(blockBelow)) {
                     outputValuableCoordinates(positionClicked.below(i), player, blockBelow);
@@ -38,10 +38,10 @@ public class DowsingRodItem extends Item {
             }
         }
 
-        p_41427_.getItemInHand().hurtAndBreak(1, p_41427_.getPlayer(),
+        pContext.getItemInHand().hurtAndBreak(1, pContext.getPlayer(),
                 (player) -> player.broadcastBreakEvent(player.getUsedItemHand()));
 
-        return super.useOn(p_41427_);
+        return super.useOn(pContext);
     }
 
     private void outputValuableCoordinates(BlockPos blockPos, Player player, Block blockBelow) {
@@ -50,7 +50,9 @@ public class DowsingRodItem extends Item {
     }
 
     private boolean isValuableBlock(Block block) {
-        return block == Blocks.COAL_BLOCK || block == Blocks.COPPER_ORE || block == Blocks.GOLD_ORE ||
-                block == Blocks.IRON_ORE || block == Blocks.DIAMOND_ORE;
+        return block == Blocks.COAL_ORE || block == Blocks.COPPER_ORE || block == Blocks.GOLD_ORE ||
+                block == Blocks.IRON_ORE || block == Blocks.DIAMOND_ORE || block == Blocks.ANCIENT_DEBRIS ||
+                block == Blocks.NETHER_QUARTZ_ORE || block == Blocks.AMETHYST_CLUSTER ||
+                block == Blocks.BUDDING_AMETHYST || block == Blocks.LAPIS_ORE || block == Blocks.EMERALD_ORE;
     }
 }
