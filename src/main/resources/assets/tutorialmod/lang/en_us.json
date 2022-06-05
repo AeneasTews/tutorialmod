@@ -17,5 +17,10 @@
 
   "itemGroup.tutorialtab": "Tutorial Mod",
 
-  "item.tutorialmod.dowsing_rod.no_valuables": "No Valuables found!"
+  "item.tutorialmod.dowsing_rod.no_valuables": "No Valuables found!",
+  "tooltip.tutorialmod.dowsing_rod.tooltip": "Right Click to find Valuables!",
+  "tooltip.tutorialmod.dowsing_rod.tooltip.shift": "Press §eSHIFT§r for more Information!",
+
+  "tooltip.tutorialmod.block.jumpy_block": "Jumps Items and Entities up!",
+  "tooltip.tutorialmod.block.diamond_jumpy_block": "Jumps a bit higher!"
 }
