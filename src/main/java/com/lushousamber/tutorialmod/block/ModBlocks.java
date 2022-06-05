@@ -1,6 +1,8 @@
 package com.lushousamber.tutorialmod.block;
 
 import com.lushousamber.tutorialmod.TutorialMod;
+import com.lushousamber.tutorialmod.block.custom.JumpyBlock;
+import com.lushousamber.tutorialmod.block.custom.SpeedyBlock;
 import com.lushousamber.tutorialmod.item.ModCreativeModeTab;
 import com.lushousamber.tutorialmod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -43,6 +45,14 @@ public class ModBlocks {
     public static final RegistryObject<Block> NETHERRACK_CITRINE_ORE = registerBlock("netherrack_citrine_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(4f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
+
+    public static final RegistryObject<Block> SPEEDY_BLOCK = registerBlock("speedy_block",
+            () -> new SpeedyBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(2f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
+
+    public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
+            () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(2f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);

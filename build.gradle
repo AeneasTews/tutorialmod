@@ -18,7 +18,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply from: "https://moddingtutorials.org/applesilicon.gradle"
 
 
-version = '0.0.1-1.18.2'
+version = '1.0-1.18.2'
 group = 'com.lushousamber.tutorialmod'
 archivesBaseName = 'tutorialmod'
 
