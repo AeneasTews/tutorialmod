@@ -29,12 +29,13 @@ displayName="Tutorial Mod" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="examplemod.png" #optional
 # A text field displayed in the mod UI
-credits="Thanks to moddingtutorials.org for their fix regarding M1 Macs" #optional
+credits="Thanks to moddingtutorials.org for their fix regarding M1 Macs! Thanks to kaupenjoe for their tutorial on minecraft modding! Check out their Udemy and YouTube courses!" #optional
 # A text field displayed in the mod UI
-authors="LushousAmber" #optional
+authors="Aeneas Tews" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-This is a tutorial mod
+This is a tutorial mod!
+It uses Citrine and adds blocks around this new ore. It also adds a few more fun items. Check it out if you want a small light mod in your pack!
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.tutorialmod]] #optional

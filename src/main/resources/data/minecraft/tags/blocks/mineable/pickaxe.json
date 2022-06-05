@@ -6,6 +6,11 @@
     "tutorialmod:deepslate_citrine_ore",
     "tutorialmod:netherrack_citrine_ore",
     "tutorialmod:endstone_citrine_ore",
-    "tutorialmod:raw_citrine_block"
+    "tutorialmod:raw_citrine_block",
+    "tutorialmod:citrine_fence",
+    "tutorialmod:citrine_fence_gate",
+    "tutorialmod:citrine_slab",
+    "tutorialmod:citrine_stairs",
+    "tutorialmod:citrine_wall"
   ]
 }
