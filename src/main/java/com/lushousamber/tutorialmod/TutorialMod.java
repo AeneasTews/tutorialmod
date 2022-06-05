@@ -50,4 +50,5 @@ public class TutorialMod
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
+    //TODO: make any shovel work for crafting recipe of dowsing rod -> tags folder in tutorialmod?
 }

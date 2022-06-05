@@ -3,6 +3,7 @@
   "item.tutorialmod.raw_citrine": "Raw Citrine",
   "item.tutorialmod.dowsing_rod": "Dowsing Rod",
   "item.tutorialmod.cucumber": "Cucumber",
+  "item.tutorialmod.coal_coke": "Coal Coke",
 
   "block.tutorialmod.citrine_block": "Citrine Block",
   "block.tutorialmod.raw_citrine_block": "Raw Citrine Block",
@@ -12,6 +13,7 @@
   "block.tutorialmod.endstone_citrine_ore": "Endstone Citrine Ore",
   "block.tutorialmod.speedy_block": "Speedy Block",
   "block.tutorialmod.jumpy_block": "Jumpy Block",
+  "block.tutorialmod.diamond_jumpy_block": "Diamond Jumpy Block",
 
   "itemGroup.tutorialtab": "Tutorial Mod",
 

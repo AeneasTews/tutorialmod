@@ -15,6 +15,7 @@ nanoattack:
 - endstone_citrine_ore.png
 - netherrack_citrine_ore.png
 - raw_citrine_block.png
+- coal_coke.png
 
 kaupenjoe:
 - dowsing_rod.png

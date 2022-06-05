@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "D D",
+    " J ",
+    "D D"
+  ],
+  "key": {
+    "J": {
+      "item": "tutorialmod:jumpy_block"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "tutorialmod:diamond_jumpy_block"
+  }
+}

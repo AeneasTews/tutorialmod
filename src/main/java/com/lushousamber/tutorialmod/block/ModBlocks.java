@@ -52,7 +52,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
             () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(2f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
+                    .strength(2f).requiresCorrectToolForDrops(), 0.5f), ModCreativeModeTab.TUTORIAL_TAB);
+
+    public static final RegistryObject<Block> DIMAOND_JUMPY_BLOCK = registerBlock("diamond_jumpy_block",
+            () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(2f).requiresCorrectToolForDrops(), 1f), ModCreativeModeTab.TUTORIAL_TAB);
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
