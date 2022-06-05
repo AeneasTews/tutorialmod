@@ -1,5 +1,7 @@
 {
   "replace": false,
   "values": [
+    "tutorialmod:jumpy_block",
+    "tutorialmod:diamond_jumpy_block"
   ]
 }

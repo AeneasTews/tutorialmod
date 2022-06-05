@@ -14,6 +14,11 @@
   "block.tutorialmod.speedy_block": "Speedy Block",
   "block.tutorialmod.jumpy_block": "Jumpy Block",
   "block.tutorialmod.diamond_jumpy_block": "Diamond Jumpy Block",
+  "block.tutorialmod.citrine_slab": "Citrine Slab",
+  "block.tutorialmod.citrine_stairs": "Citrine Stairs",
+  "block.tutorialmod.citrine_fence": "Citrine Fence",
+  "block.tutorialmod.citrine_wall": "Citrine Wall",
+  "block.tutorialmod.citrine_fence_gate": "Citrine Fence Gate",
 
   "itemGroup.tutorialtab": "Tutorial Mod",
 
