@@ -3,6 +3,7 @@ package com.lushousamber.tutorialmod.item;
 import com.lushousamber.tutorialmod.TutorialMod;
 import com.lushousamber.tutorialmod.item.custom.CoalCokeItem;
 import com.lushousamber.tutorialmod.item.custom.DowsingRodItem;
+import com.lushousamber.tutorialmod.item.custom.HammerItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -31,6 +32,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> COAL_COKE = ITEMS.register("coal_coke",
             () -> new CoalCokeItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> HAMMER = ITEMS.register("hammer",
+            () -> new HammerItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)
+                    .durability(500)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

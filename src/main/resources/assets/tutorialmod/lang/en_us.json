@@ -4,6 +4,7 @@
   "item.tutorialmod.dowsing_rod": "Dowsing Rod",
   "item.tutorialmod.cucumber": "Cucumber",
   "item.tutorialmod.coal_coke": "Coal Coke",
+  "item.tutorialmod.hammer": "Hammer",
 
   "block.tutorialmod.citrine_block": "Citrine Block",
   "block.tutorialmod.raw_citrine_block": "Raw Citrine Block",
@@ -27,5 +28,7 @@
   "tooltip.tutorialmod.dowsing_rod.tooltip.shift": "Press §eSHIFT§r for more Information!",
 
   "tooltip.tutorialmod.block.jumpy_block": "Jumps Items and Entities up!",
-  "tooltip.tutorialmod.block.diamond_jumpy_block": "Jumps a bit higher!"
+  "tooltip.tutorialmod.block.diamond_jumpy_block": "Jumps a bit higher!",
+
+  "item.tutorialmod.hammer.no_hitting_babies": "§cNo hitting §6§lBabies§r§c!!!"
 }
