@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:storage_blocks/citrine",
+    "#forge:storage_blocks/raw_citrine"
+  ]
+}
