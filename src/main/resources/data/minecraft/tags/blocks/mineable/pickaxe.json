@@ -11,6 +11,8 @@
     "tutorialmod:citrine_fence_gate",
     "tutorialmod:citrine_slab",
     "tutorialmod:citrine_stairs",
-    "tutorialmod:citrine_wall"
+    "tutorialmod:citrine_wall",
+    "tutorialmod:citrine_pressure_plate",
+    "tutorialmod:citrine_button"
   ]
 }

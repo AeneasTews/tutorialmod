@@ -12,6 +12,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -56,12 +57,12 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
             () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(2f).requiresCorrectToolForDrops(), 0.5f), ModCreativeModeTab.TUTORIAL_TAB,
+                    .strength(2f).requiresCorrectToolForDrops(), 0.5f, new Vec3(0, 1, 0)), ModCreativeModeTab.TUTORIAL_TAB,
             "tooltip.tutorialmod.block.jumpy_block");
 
     public static final RegistryObject<Block> DIMAOND_JUMPY_BLOCK = registerBlock("diamond_jumpy_block",
             () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(2f).requiresCorrectToolForDrops(), 1f), ModCreativeModeTab.TUTORIAL_TAB,
+                    .strength(2f).requiresCorrectToolForDrops(), 1f, new Vec3(0, 1 ,0)), ModCreativeModeTab.TUTORIAL_TAB,
             "tooltip.tutorialmod.block.diamond_jumpy_block");
 
     public static final RegistryObject<Block> CITRINE_STAIRS = registerBlock("citrine_stairs",
@@ -83,6 +84,22 @@ public class ModBlocks {
     public static final RegistryObject<Block> CITRINE_WALL = registerBlock("citrine_wall",
             () -> new WallBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
+
+    public static final RegistryObject<Block> CITRINE_BUTTON = registerBlock("citrine_button",
+            () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(6f).requiresCorrectToolForDrops().noCollission()), ModCreativeModeTab.TUTORIAL_TAB);
+
+    public static final RegistryObject<Block> CITRINE_PRESSURE_PLATE = registerBlock("citrine_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
+
+    public static final RegistryObject<Block> EBONY_DOOR = registerBlock("ebony_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.TUTORIAL_TAB);
+
+    public static final RegistryObject<Block> EBONY_TRAPDOOR = registerBlock("ebony_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(6f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.TUTORIAL_TAB);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab,

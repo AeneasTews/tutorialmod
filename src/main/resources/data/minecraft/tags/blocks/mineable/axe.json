@@ -1,5 +1,7 @@
 {
   "replace": false,
   "values": [
+    "tutorialmod:ebony_door",
+    "tutorialmod:ebony_trapdoor"
   ]
 }

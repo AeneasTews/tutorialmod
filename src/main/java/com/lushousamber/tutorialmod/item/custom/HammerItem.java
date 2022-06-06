@@ -1,12 +1,15 @@
 package com.lushousamber.tutorialmod.item.custom;
 
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
@@ -30,8 +33,20 @@ public class HammerItem extends Item {
 
             Vec3 launching = new Vec3(0, 10, 0);
             player.moveTo(player.position().add(launching));
-            //TODO: make this work in a way that i want it to
+            //TODO: check if on client side and then launch when baby is hurt -> use code below
         }
-        return false;
+
+        return super.hurtEnemy(p_41395_, p_41396_, p_41397_);
     }
+
+    // @Override
+    // public @NotNull InteractionResultHolder<ItemStack> use(Level p_41432_, @NotNull Player p_41433_, @NotNull InteractionHand p_41434_) {
+    //    if (p_41432_.isClientSide()) {
+    //        Vec3 looking = p_41433_.getForward();
+    //        Vec3 launching = looking.scale(-5f);
+    //        p_41433_.setDeltaMovement(launching);
+    //    }
+
+    //    return super.use(p_41432_, p_41433_, p_41434_);
+    //}
 }
