@@ -3,6 +3,7 @@ package com.lushousamber.tutorialmod;
 import com.lushousamber.tutorialmod.block.ModBlocks;
 import com.lushousamber.tutorialmod.item.ModItems;
 import com.mojang.logging.LogUtils;
+import net.minecraft.advancements.critereon.EntityHurtPlayerTrigger;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
@@ -46,8 +47,9 @@ public class TutorialMod {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_PINK_ROSE.get(), RenderType.cutout());
     }
 
-        private void setup(final FMLCommonSetupEvent event) {
-            event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PINK_ROSE.getId(), ModBlocks.POTTED_PINK_ROSE));
-        }
+    private void setup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PINK_ROSE.getId(), ModBlocks.POTTED_PINK_ROSE));
+    }
+
     //TODO: should I keep dowsing rod?
 }
