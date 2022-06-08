@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "tutorialmod:item/hammer",
+		"0": "tutorialmod:item/citrine_hammer",
 		"1": "tutorialmod:item/hammer_stem"
 	},
 	"elements": [

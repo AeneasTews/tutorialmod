@@ -18,7 +18,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply from: "https://moddingtutorials.org/applesilicon.gradle"
 
 
-version = '1.5.1-1.18.2'
+version = '1.5.5-1.18.2'
 group = 'com.aeneastews.tutorialmod'
 archivesBaseName = 'tutorialmod'
 

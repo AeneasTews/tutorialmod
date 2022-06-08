@@ -1,18 +1,13 @@
 package com.lushousamber.tutorialmod.item;
 
 import com.lushousamber.tutorialmod.TutorialMod;
-import com.lushousamber.tutorialmod.item.custom.CoalCokeItem;
-import com.lushousamber.tutorialmod.item.custom.DowsingRodItem;
-import com.lushousamber.tutorialmod.item.custom.HammerItem;
-import com.lushousamber.tutorialmod.item.custom.LevitationSwordItem;
+import com.lushousamber.tutorialmod.item.custom.*;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
-import java.util.logging.Logger;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -30,8 +25,8 @@ public class ModItems {
             () -> new DowsingRodItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)
                     .durability(1000)));
 
-    public static final RegistryObject<Item> HAMMER = ITEMS.register("hammer",
-            () -> new HammerItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)
+    public static final RegistryObject<Item> HAMMER = ITEMS.register("citrine_hammer",
+            () -> new CitrineHammerItem(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)
                     .durability(500)));
 
     // Foods
@@ -67,7 +62,7 @@ public class ModItems {
     // Citrine Armor
     // TODO: balance
     public static final RegistryObject<Item> CITRINE_HELMET = ITEMS.register("citrine_helmet",
-            () -> new ArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.HEAD, new Item.Properties()
+            () -> new ModArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.HEAD, new Item.Properties()
                     .tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
     public static final RegistryObject<Item> CITRINE_CHESTPLATE = ITEMS.register("citrine_chestplate",

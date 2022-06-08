@@ -7,6 +7,7 @@ import com.lushousamber.tutorialmod.item.ModCreativeModeTab;
 import com.lushousamber.tutorialmod.item.ModItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
@@ -31,7 +32,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
 
-    public static final RegistryObject<Block> RAW_CITRINE = registerBlock("raw_citrine_block",
+    public static final RegistryObject<Block> RAW_CITRINE_BLOCK = registerBlock("raw_citrine_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(7f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
 
@@ -101,6 +102,18 @@ public class ModBlocks {
             () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(6f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.TUTORIAL_TAB);
 
+    public static final RegistryObject<Block> PINK_ROSE = registerBlock("pink_rose",
+            () -> new FlowerBlock(MobEffects.LEVITATION, 8,
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()), ModCreativeModeTab.TUTORIAL_TAB);
+
+    public static final RegistryObject<Block> POTTED_PINK_ROSE = registerBlockWithoutBlockItem("potted_pink_rose",
+            () -> new FlowerPotBlock(null, ModBlocks.PINK_ROSE,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION).noOcclusion()));
+
+
+    private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
+        return BLOCKS.register(name, block);
+    }
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab,
                                                                      String tooltipKey) {
